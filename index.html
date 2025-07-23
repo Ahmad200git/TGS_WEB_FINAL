@@ -125,7 +125,75 @@
         Video tentang kegiatan mahasiswa dan fasilitas kampus.
       </video>
     </section>
+<!-- Contact Page -->
+    <section id="contact" class="page-section hidden">
+      <h2>Kontak Kami</h2>
+      <p>Silakan isi formulir di bawah ini untuk menghubungi kami atau langsung hubungi menggunakan
+         informasi berikut:</p>
+      <ul>
+        <li>Alamat: Jalan Bulukumba No. 123, Kota Bulukumba</li>
+        <li>Email: info@kampusanritaopi.ac.id</li>
+        <li>Telepon: (021) 085656191731</li>
+      </ul>
+<form id="contactForm">
+        <label for="name">Nama Lengkap</label>
+        <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" required />
 
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Masukkan email Anda" required />
+
+        <label for="message">Pesan</label>
+        <textarea id="message" name="message" rows="5" placeholder="Tulis pesan Anda" required></textarea>
+
+        <button type="submit">Kirim Pesan</button>
+      </form>
+      <p id="contactMsg" style="color: green; font-weight: bold; display:none;"></p>
+    </section>
+<!-- Admission Page -->
+    <section id="admission" class="page-section hidden">
+      <h2>Pendaftaran Mahasiswa Baru</h2>
+      <p>Ikuti prosedur pendaftaran sesuai petunjuk di bawah ini, dan lengkapi formulir online untuk bergabung bersama kami.</p>
+      <ol>
+        <li>Kunjungi halaman pendaftaran ini.</li>
+        <li>Isi data diri dan pilih program studi yang diminati.</li>
+        <li>Kirimkan dokumen pendukung seperti ijazah dan nilai rapor secara online.</li>
+        <li>Tunggu konfirmasi dari pihak kampus melalui email atau telepon.</li>
+      </ol>
+
+ <form id="admissionForm">
+        <label for="fullName">Nama Lengkap</label>
+        <input type="text" id="fullName" name="fullName" placeholder="Masukkan nama lengkap" 
+        required />
+
+        <label for="birthDate">Tanggal Lahir</label>
+        <input type="date" id="birthDate" name="birthDate" required />
+
+        <label for="program">Pilih Program Studi</label>
+        <select id="program" name="program" required>
+          <option value="">-- Pilih Program Studi --</option>
+          <option value="Teknik Informatika">Teknik Informatika</option>
+          <option value="Sistem Informasi">Sistem Informasi</option>
+          <option value="Teknik Elektro">Teknik Elektro</option>
+          <option value="Teknik Mesin">Teknik Mesin</option>
+          <option value="Hukum Syariah">Hukum Syariah</option>
+          <option value="Ilmu hukum">Ilmu Hukum</option>
+        </select>
+
+         <label for="emailAdm">Email</label>
+        <input type="email" id="emailAdm" name="emailAdm" placeholder="Masukkan email aktif" required />
+
+        <label for="phone">No. Telepon</label>
+        <input type="tel" id="phone" name="phone" placeholder="Masukkan nomor telepon" required />
+
+        <button type="submit">Daftar</button>
+      </form>
+      <p id="admissionMsg" style="color: green; font-weight: bold; display:none;"></p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2024 Kampus panrita Lopi. Semua hak cipta dilindungi.
+  </footer>
 
 
 
