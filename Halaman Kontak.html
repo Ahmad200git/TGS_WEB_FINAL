@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Kontak Kami - Kampus Handayani</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #059bc0;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      background: #e0dede;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    .info-kontak {
+      margin-bottom: 30px;
+      padding: 20px;
+      background-color: #d8cbcb;
+      border-left: 4px solid #0b5394;
+    }
+
+    label {
+      display: block;
+      margin: 12px 0 6px;
+      font-weight: bold;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    button {
+      margin-top: 15px;
+      background-color: #0b5394;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #063769;
+    }
+
+    .alert {
+      margin-top: 20px;
+      padding: 12px;
+      background-color: #d4edda;
+      color: #155724;
+      border-left: 4px solid #28a745;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Hubungi Kami</h1>
+
+    <div class="info-kontak">
+      <p><strong>Alamat:</strong> Jl. A.P. Pettarani No. 80, Makassar, Sulawesi Selatan</p>
+      <p><strong>Email:</strong> info@handayani.ac.id</p>
+      <p><strong>Telepon:</strong> (0411) 1234567</p>
+    </div>
+
+    <form id="contactForm">
+      <label for="nama">Nama Lengkap</label>
+      <input type="text" id="nama" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" required />
+
+      <label for="pesan">Pesan</label>
+      <textarea id="pesan" rows="5" required></textarea>
+
+      <button type="submit">Kirim Pesan</button>
+    </form>
+
+    <div class="alert" id="alertBox">Pesan Anda telah dikirim. Terima kasih!</div>
+  </div>
+
+  <script>
+    const form = document.getElementById('contactForm');
+    const alertBox = document.getElementById('alertBox');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault(); // Mencegah reload
+
+      // Ambil data dari input
+      const nama = document.getElementById('nama').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const pesan = document.getElementById('pesan').value.trim();
+
+      // Validasi sederhana
+      if (nama === '' || email === '' || pesan === '') {
+        alert('Silakan isi semua kolom.');
+        return;
+      }
+
+      // Simulasi "mengirim" data
+      console.log("Nama:", nama);
+      console.log("Email:", email);
+      console.log("Pesan:", pesan);
+
+      // Tampilkan pesan sukses
+      alertBox.style.display = 'block';
+
+      // Reset form
+      form.reset();
+
+      // Sembunyikan alert setelah 5 detik
+      setTimeout(() => {
+        alertBox.style.display = 'none';
+      }, 5000);
+    });
+  </script>
+
+</body>
+</html>
