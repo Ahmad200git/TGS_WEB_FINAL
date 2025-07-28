@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Halaman Pendaftaran - Kampus Handayani</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #2b7ed1;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 30px;
+      background-color: #aa9898;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+    }
+
+    .info {
+      background-color: #e8f0fe;
+      padding: 20px;
+      margin-bottom: 30px;
+      border-left: 5px solid #1a73e8;
+    }
+
+    label {
+      display: block;
+      margin: 12px 0 6px;
+      font-weight: bold;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    button {
+      margin-top: 20px;
+      background-color: #1a73e8;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0c57c3;
+    }
+
+    .alert {
+      margin-top: 20px;
+      padding: 12px;
+      background-color: #d4edda;
+      color: #155724;
+      border-left: 4px solid #28a745;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Pendaftaran Mahasiswa Baru</h1>
+
+  <div class="info">
+    <h3>Prosedur Pendaftaran:</h3>
+    <ol>
+      <li>Membuat akun di sistem pendaftaran online.</li>
+      <li>Mengisi data diri lengkap sesuai identitas resmi.</li>
+      <li>Memilih program studi yang diminati.</li>
+      <li>Mengunggah berkas seperti ijazah dan foto.</li>
+      <li>Membayar biaya pendaftaran melalui bank mitra.</li>
+      <li>Menunggu verifikasi dari admin kampus.</li>
+    </ol>
+  </div>
+
+  <form id="formPendaftaran">
+    <label for="nama">Nama Lengkap</label>
+    <input type="text" id="nama" required>
+
+    <label for="jk">Jenis Kelamin</label>
+    <select id="jk" required>
+      <option value="">-- Pilih --</option>
+      <option value="Laki-laki">Laki-laki</option>
+      <option value="Perempuan">Perempuan</option>
+    </select>
+
+    <label for="ayah">Nama Ayah</label>
+    <input type="text" id="ayah" required>
+
+    <label for="ibu">Nama Ibu</label>
+    <input type="text" id="ibu" required>
+
+    <label for="ttl">Tempat, Tanggal Lahir</label>
+    <input type="text" id="ttl" placeholder="Contoh: Makassar, 5 Mei 2006" required>
+
+    <label for="asal">Asal Sekolah</label>
+    <input type="text" id="asal" required>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" required>
+
+    <label for="nohp">No. HP</label>
+    <input type="text" id="nohp" required>
+
+    <label for="prodi">Pilih Program Studi</label>
+    <select id="prodi" required>
+      <option value="">-- Pilih --</option>
+      <option value="Teknik Informatika">Teknik Informatika</option>
+      <option value="Manajemen">Manajemen</option>
+      <option value="Sistem Komputer">Sistem Komputer</option>
+      <option value="Sistem Informasi">Sistem Informasi</option>
+    </select>
+
+    <label for="catatan">Catatan Tambahan</label>
+    <textarea id="catatan" rows="4"></textarea>
+
+    <button type="submit">Kirim Pendaftaran</button>
+  </form>
+
+  <div class="alert" id="alertPendaftaran">Formulir Anda berhasil dikirim. Terima kasih telah mendaftar!</div>
+</div>
+
+<script>
+  const form = document.getElementById("formPendaftaran");
+  const alertBox = document.getElementById("alertPendaftaran");
+
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const fields = ["nama", "jk", "ayah", "ibu", "ttl", "asal", "email", "nohp", "prodi"];
+    let isValid = true;
+
+    for (let field of fields) {
+      if (!document.getElementById(field).value.trim()) {
+        isValid = false;
+        break;
+      }
+    }
+
+    if (!isValid) {
+      alert("Mohon lengkapi semua kolom yang wajib diisi.");
+      return;
+    }
+
+    // Anda bisa menambahkan penyimpanan data ke database di sini
+    console.log("Data formulir berhasil disubmit.");
+
+    form.reset();
+    alertBox.style.display = "block";
+
+    setTimeout(() => {
+      alertBox.style.display = "none";
+    }, 5000);
+  });
+</script>
+
+</body>
+</html>
