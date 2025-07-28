@@ -110,3 +110,46 @@ body {
   display: block;
   margin-bottom: 10px;
 }
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  color: #333;
+}
+
+.program-studi {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.program-studi h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.program-studi ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.program-studi li {
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+  font-size: 16px;
+}
+
+.tentang {
+  padding: 20px;
+}
+
+.tentang h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.tentang p {
+  font-size: 16px;
+  line-height: 1.5;
+}
