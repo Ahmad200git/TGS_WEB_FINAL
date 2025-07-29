@@ -1,115 +1,175 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Universitas Handayani</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    body { font-family: 'Inter', sans-serif; }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Universitas Panrita Lopi</title> <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="shortcut icon" href=" Ship at Sunset Logo.png" type="image/x-icon" />
+  
 </head>
-<body class="bg-gray-50 text-gray-800">
-
-  <!-- Navbar -->
-  <header class="bg-white shadow">
-    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-      <div class="text-xl font-bold text-purple-700">Universitas Handayani</div>
-      <nav class="space-x-6">
-        <a href="#" class="text-gray-700 hover:text-purple-700">Beranda</a>
-        <a href="#" class="text-gray-700 hover:text-purple-700">Profil</a>
-        <a href="#" class="text-gray-700 hover:text-purple-700">Fakultas</a>
-        <a href="#" class="text-gray-700 hover:text-purple-700">Pendaftaran</a>
-      </nav>
-    </div>
+<body>
+  <header>
+    <h1>Profil Kampus</h1>
+    <nav>
+      <a href="#" data-page="home" class="nav-link">Beranda</a>
+      <a href="#" data-page="about" class="nav-link">Tentang</a>
+      <a href="#" data-page="programs" class="nav-link">Program Studi</a>
+      <a href="#" data-page="news" class="nav-link">Berita & Acara</a>
+      <a href="#" data-page="gallery" class="nav-link">Galeri</a>
+      <a href="#" data-page="contact" class="nav-link">Kontak</a>
+      <a href="#" data-page="admission" class="nav-link">Pendaftaran</a>
+    </nav>
   </header>
 
-  <!-- Hero Section with Video -->
-  <section class="relative h-[500px] overflow-hidden flex items-center justify-center text-white">
-    <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover z-0">
-      <source src="tes.mp4" type="video/mp4">
-      Browser Anda tidak mendukung tag video.
-    </video>
-    <div class="absolute top-0 left-0 w-full h-full bg-purple-800 bg-opacity-60 z-10"></div>
-    <div class="relative z-20 text-center px-4">
-      <h1 class="text-4xl font-bold mb-4">Selamat Datang di Universitas Handayani</h1>
-      <p class="text-lg mb-6">Pusat pendidikan tinggi unggulan di Makassar</p>
-      <a href="#" class="bg-white text-purple-600 px-6 py-3 rounded-full font-semibold shadow hover:bg-purple-100">Daftar Sekarang</a>
-    </div>
-  </section>
+  <main>
+    <!-- Home Page -->
+    <section id="home" class="page-section">
+      <h2>Selamat Datang di Kampus Kami</h2>
+      <video class="banner-video" controls muted autoplay loop>
+        <source src="videoplayback.mp4" type="video/mp4" />
+        Video banner tentang kampus kami.
+      </video>
+      <p>Kami adalah institusi pendidikan tinggi yang berkomitmen menyediakan pendidikan terbaik,
+         fasilitas lengkap, dan dosen berkualitas untuk masa depan yang cerah.</p>
+      <p>Jelajahi situs ini untuk mengetahui lebih lanjut tentang kampus, 
+        program studi, berita terbaru, acara yang akan datang, 
+        dan bagaimana bergabung bersama kami.</p>
+    </section>
 
-  <!-- Pencarian -->
-  <section class="bg-white shadow-md py-6">
-    <div class="max-w-4xl mx-auto px-4 flex items-center gap-2">
-      <select class="px-4 py-2 border rounded-md">
-        <option>Semua</option>
-        <option>Berita</option>
-        <option>Galeri</option>
-        <option>Pendaftaran</option>
-      </select>
-      <input type="text" placeholder="Cari Program Studi atau Nama Dosen..." class="flex-grow px-4 py-2 border rounded-md">
-      <button class="bg-purple-600 text-white px-4 py-2 rounded-md hover:bg-purple-700">Cari</button>
-    </div>
-  </section>
+    <!-- About Page -->
+    <section id="about" class="page-section hidden">
+      <h2>Tentang Kampus Kami</h2>
+      <h3>Sejarah Singkat</h3>
+      <p>Kampus kami didirikan pada tahun 1990 sebagai pusat pendidikan 
+        teknologi dan sains yang unggul di tingkat nasional.</p>
+      <h3>Visi dan Misi</h3>
+      <ul>
+        <li><strong>Visi:</strong> Menjadi kampus unggulan dalam pengembangan ilmu pengetahuan dan 
+          teknologi yang berwawasan global.</li>
+        <li><strong>Misi:</strong> 
+          <ol>
+            <li>Menyelenggarakan pendidikan berkualitas dan relevan dengan perkembangan zaman.</li>
+            <li>Mendorong penelitian dan inovasi yang berdampak positif.</li>
+            <li>Membangun kerjasama nasional dan internasional.</li>
+          </ol>
+        </li>
+      </ul>
+      <h3>Profil Rektor dan Dekan</h3>
+      <p><strong>Rektor:</strong> Prof. Dr. Ahmad Rifai, M.T.</p>
+      <p><strong>Dekan Fakultas Teknik:</strong> Dr. Ani Wijaya, S.T., M.Eng.</p>
+    </section>
 
-  <!-- Menu Kategori -->
-  <section class="py-10">
-    <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 px-4">
-      <a href="halaman program studi.html" class="bg-white p-4 rounded-xl shadow text-center hover:shadow-md block">
-        <img src="https://img.icons8.com/3d-fluency/48/book.png" class="mx-auto mb-2" />
-        <h3 class="font-semibold">Prodi</h3>
-      </a>
-      <div class="bg-white p-4 rounded-xl shadow text-center hover:shadow-md">
-        <img src="https://img.icons8.com/3d-fluency/48/university.png" class="mx-auto mb-2" />
-        <h3 class="font-semibold">Fakultas</h3>
-      </div>
-      <div class="bg-white p-4 rounded-xl shadow text-center hover:shadow-md">
-        <img src="https://img.icons8.com/3d-fluency/48/statistics.png" class="mx-auto mb-2" />
-        <h3 class="font-semibold">Berita</h3>
-      </div>
-      <div class="bg-white p-4 rounded-xl shadow text-center hover:shadow-md">
-        <img src="https://img.icons8.com/3d-fluency/48/news.png" class="mx-auto mb-2" />
-        <h3 class="font-semibold">Pengumuman pendaftaran</h3>
-      </div>
-      <div class="bg-white p-4 rounded-xl shadow text-center hover:shadow-md">
-        <img src="https://img.icons8.com/3d-fluency/48/open-book.png" class="mx-auto mb-2" />
-        <h3 class="font-semibold">Kontak</h3>
-      </div>
-      <div class="bg-white p-4 rounded-xl shadow text-center hover:shadow-md">
-        <img src="https://img.icons8.com/3d-fluency/48/map.png" class="mx-auto mb-2" />
-        <h3 class="font-semibold">Dosen</h3>
-      </div>
-    </div>
-  </section>
+    <!-- Programs Page -->
+    <section id="programs" class="page-section hidden">
+      <h2>Program Studi</h2>
+      <ul>
+        <li><strong>Teknik Informatika</strong> - Program studi yang mempelajari pengembangan perangkat lunak dan sistem informasi.</li>
+        <li><strong>Sistem Informasi</strong> - Fokus pada manajemen data dan teknologi informasi bisnis.</li>
+        <li><strong>Teknik Elektro</strong> - Memahami teknologi kelistrikan dan aplikasinya dalam industri.</li>
+        <li><strong>Teknik Mesin</strong> - Studi tentang desain, produksi, dan pemeliharaan mesin.</li>
+      </ul>
+    </section>
 
-  <!-- Statistik -->
-  <section class="bg-gray-100 py-10">
-    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-3 gap-6 text-center">
-      <div class="bg-white rounded-xl p-6 shadow">
-        <h2 class="text-lg font-semibold text-gray-700">Mahasiswa Aktif</h2>
-        <p class="text-3xl font-bold text-purple-600 mt-2">10.435</p>
-      </div>
-      <div class="bg-white rounded-xl p-6 shadow">
-        <h2 class="text-lg font-semibold text-gray-700">Dosen Tetap</h2>
-        <p class="text-3xl font-bold text-purple-600 mt-2">245</p>
-      </div>
-      <div class="bg-white rounded-xl p-6 shadow">
-        <h2 class="text-lg font-semibold text-gray-700">Program Studi</h2>
-        <p class="text-3xl font-bold text-purple-600 mt-2">32</p>
-      </div>
-    </div>
-  </section>
+    <!-- News and Events Page -->
+    <section id="news" class="page-section hidden">
+      <h2>Berita dan Acara Terbaru</h2>
+      <article>
+        <h3>Seminar Teknologi Digital 2024</h3>
+        <small>12 Maret 2024</small>
+        <p>Kampus akan menyelenggarakan seminar bertema perkembangan teknologi digital terbaru yang menghadirkan pembicara ahli dari industri.</p>
+      </article>
+      <article>
+        <h3>Peresmian Laboratorium Baru</h3>
+        <small>5 Februari 2024</small>
+        <p>Pembukaan laboratorium teknik canggih dengan peralatan modern untuk mendukung riset mahasiswa dan dosen.</p>
+      </article>
+      <article>
+        <h3>Pendaftaran Beasiswa Mahasiswa</h3>
+        <small>1 Januari - 31 Maret 2024</small>
+        <p>Dibuka pendaftaran beasiswa prestasi akademik dan non-akademik bagi mahasiswa baru dan lama.</p>
+      </article>
+    </section>
 
-  <!-- Footer -->
-  <footer class="bg-purple-700 text-white py-6">
-    <div class="max-w-6xl mx-auto px-4 flex justify-between flex-wrap gap-4">
-      <p>© 2025 Universitas Handayani</p>
-      <div class="space-x-4">
-        <a href="#" class="hover:underline">Tentang</a>
-        <a href="#" class="hover:underline">Kebijakan Privasi</a>
+    <!-- Gallery Page -->
+    <section id="gallery" class="page-section hidden">
+      <h2>Galeri Kampus</h2>
+      <div class="gallery-grid">
+        <img src="FTSP-UII-2.jpg" alt="Foto gedung utama kampus dengan desain modern dan halaman depan yang rindang dengan pepohonan hijau" onerror="this.style.display='none'" />
+        <img src="IMG-20250719-WA0178.jpg" alt="Kegiatan mahasiswa sedang berdiskusi dan belajar kelompok di ruang kelas yang berfasilitas lengkap" onerror="this.style.display='none'" />
+        <img src="Laboratorium-Komputer.jpg" alt="Laboratorium komputer dengan barisan komputer modern dan mahasiswa sedang mengerjakan praktikum" onerror="this.style.display='none'" />
+        <img src="Peresmian-Kantin-FEB-1.jpg" alt="Area kantin kampus yang nyaman dan ramai dengan mahasiswa bercengkerama" onerror="this.style.display='none'" />
+        <img src="DSC_0064-scaled.jpg" alt="Acara wisuda mahasiswa dengan suasana penuh kebahagiaan dan penghargaan" onerror="this.style.display='none'" />
       </div>
-    </div>
+
+    </section>
+
+    <!-- Contact Page -->
+    <section id="contact" class="page-section hidden">
+      <h2>Kontak Kami</h2>
+      <p>Silakan isi formulir di bawah ini untuk menghubungi kami atau langsung hubungi menggunakan informasi berikut:</p>
+      <ul>
+        <li>Alamat: Sultan Daeng Raja No. 12, Kota Bulukumba</li>
+        <li>Email: info@PanritaLopi.ac.id</li>
+        <li>Telepon: (021) 555-1234</li>
+      </ul>
+
+      <form id="contactForm">
+        <label for="name">Nama Lengkap</label>
+        <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" required />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Masukkan email Anda" required />
+
+        <label for="message">Pesan</label>
+        <textarea id="message" name="message" rows="5" placeholder="Tulis pesan Anda" required></textarea>
+
+        <button type="submit">Kirim Pesan</button>
+      </form>
+      <p id="contactMsg" style="color: green; font-weight: bold; display:none;"></p>
+    </section>
+
+    <!-- Admission Page -->
+    <section id="admission" class="page-section hidden">
+      <h2>Pendaftaran Mahasiswa Baru</h2>
+      <p>Ikuti prosedur pendaftaran sesuai petunjuk di bawah ini, dan lengkapi formulir online untuk bergabung bersama kami.</p>
+      <ol>
+        <li>Kunjungi halaman pendaftaran ini.</li>
+        <li>Isi data diri dan pilih program studi yang diminati.</li>
+        <li>Kirimkan dokumen pendukung seperti ijazah dan nilai rapor secara online.</li>
+        <li>Tunggu konfirmasi dari pihak kampus melalui email atau telepon.</li>
+      </ol>
+
+      <form id="admissionForm">
+        <label for="fullName">Nama Lengkap</label>
+        <input type="text" id="fullName" name="fullName" placeholder="Masukkan nama lengkap" required />
+
+        <label for="birthDate">Tanggal Lahir</label>
+        <input type="date" id="birthDate" name="birthDate" required />
+
+        <label for="program">Pilih Program Studi</label>
+        <select id="program" name="program" required>
+          <option value="">-- Pilih Program Studi --</option>
+          <option value="Teknik Informatika">Teknik Informatika</option>
+          <option value="Sistem Informasi">Sistem Informasi</option>
+          <option value="Teknik Elektro">Teknik Elektro</option>
+          <option value="Teknik Mesin">Teknik Mesin</option>
+        </select>
+
+        <label for="emailAdm">Email</label>
+        <input type="email" id="emailAdm" name="emailAdm" placeholder="Masukkan email aktif" required />
+
+        <label for="phone">No. Telepon</label>
+        <input type="tel" id="phone" name="phone" placeholder="Masukkan nomor telepon" required />
+
+        <button type="submit">Daftar</button>
+      </form>
+      <p id="admissionMsg" style="color: green; font-weight: bold; display:none;"></p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Kampus Panrita Lopi . Semua hak cipta dilindungi.
   </footer>
   <script>
     // Navigasi sederhana SPA
@@ -154,5 +214,6 @@
     });
   </script>
 
+ 
 </body>
 </html>
